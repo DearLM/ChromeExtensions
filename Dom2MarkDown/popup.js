@@ -15,7 +15,7 @@ window.onload = function() {
         }
     );
 };
-function copy(){
-    navigator.clipboard.writeText(document.getElementById("mdText").innerText);
-    alert('已复制');
-}
+// function copy(){
+//     navigator.clipboard.writeText(document.getElementById("mdText").innerText);
+//     alert('已复制');
+// }

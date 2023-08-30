@@ -1,46 +1,46 @@
-# Dom2Markdown Chrome 插件
+# Dom2Markdown Chrome Extension
+[**English**](README.md) | [**中文简体**](README_zh_CN.md)
 
 ![Dom2Markdown Logo](md-on.png)
 
-Dom2Markdown 是一个方便的 Chrome 插件，它可以帮助你将网页中的特定 DOM 元素转换为 Markdown 格式的文本。这使得从网页中提取内容并在 Markdown 文档中使用变得更加轻松。
+Dom2Markdown is a convenient Chrome extension that helps you convert specific DOM elements from webpages into Markdown-formatted text. This makes it easier to extract content from webpages and use it in Markdown documents.
 
-## 安装
+## Installation
 
-如果你想尝试使用 Dom2Markdown 插件，目前插件尚未上传到 Chrome 网上应用店，但你仍然可以通过以下步骤手动安装：
+If you want to try the Dom2Markdown extension, please note that it hasn't been uploaded to the Chrome Web Store yet. However, you can still manually install it by following these steps:
 
-1. 克隆或下载 Dom2Markdown 插件的源代码到你的计算机中。
-2. 打开 Chrome 浏览器。
-3. 在浏览器地址栏中输入 `chrome://extensions`，并按下 Enter 键，以打开扩展程序管理页面。
-4. 在该页面的右上角，开启 "开发者模式"。
-5. 现在你会看到一个 "加载已解压的扩展程序" 按钮，点击它。
-6. 在弹出的文件选择窗口中，导航到你下载或克隆的 Dom2Markdown 插件文件夹，选择并打开它。
-7. 插件将会被安装并显示在扩展程序列表中，你会在浏览器的右上角看到 Dom2Markdown 的图标。
+1. Clone or download the source code of the Dom2Markdown extension to your computer.
+2. Open the Chrome browser.
+3. Enter `chrome://extensions` in the address bar and press Enter to open the Extensions management page.
+4. In the top right corner of this page, enable "Developer mode."
+5. You'll see a "Load unpacked" button now. Click it.
+6. In the file selection window that appears, navigate to the folder where you downloaded or cloned the Dom2Markdown extension, and select it.
+7. The extension will be installed and displayed in the list of extensions. You'll see the Dom2Markdown icon in the top right corner of your browser.
 
-## 使用方法
+## Usage
 
-使用 Dom2Markdown 插件非常简单：
+Using the Dom2Markdown extension is straightforward:
 
-1. 点击浏览器右上角的 Dom2Markdown 图标，可以打开或关闭插件。
-2. 当插件处于开启状态时，在网页上移动鼠标到你想提取的特定 DOM 元素上。
-3. 鼠标移动到该元素上后，右键点击以打开上下文菜单。
-4. 在上下文菜单中选择 "复制md" 选项，插件将会弹出新窗口显示转换后markdown格式的文本。
+1. Click the Dom2Markdown icon in the top right corner of your browser to open or close the extension.
+2. When the extension is active, move your mouse over the specific DOM element you want to extract from the webpage.
+3. Right-click on the element to open the context menu.
+4. Choose the "Copy as Markdown" option from the context menu. The extension will display a new window with the converted markdown-format text.
 
-## 示例
+## Examples
 
-如果你在一个博客页面中看到一个很棒的段落，并希望在自己的 Markdown 文档中引用它，使用 Dom2Markdown 就非常方便：
+If you come across an excellent paragraph on a blog page and want to quote it in your own Markdown document, Dom2Markdown makes it simple:
 
-1. 开启 Dom2Markdown 插件。
-2. 鼠标移动到博客页面的段落上。
-3. 右键点击，选择 "复制md"。
-4. 切换到你的 Markdown 文档，并粘贴已复制的 Markdown 格式段落。
+1. Activate the Dom2Markdown extension.
+2. Move your mouse over the paragraph on the blog page.
+3. Right-click and select "Copy as Markdown."
+4. Switch to your Markdown document and paste the copied Markdown-formatted paragraph.
 
-这样，你就可以快速将网页上的内容转换为 Markdown，无需手动处理格式。
+This way, you can quickly convert content from webpages into Markdown without manual formatting.
 
-## 贡献
+## Contribution
 
-如果你对该插件有任何建议或问题，欢迎在 GitHub 仓库中提出 issue 或提交 pull 请求。你可以访问 [Dom2Markdown GitHub 仓库](https://github.com/DearLM/ChromeExtensions)。
+If you have any suggestions or issues regarding the extension, feel free to raise an issue or submit a pull request on the [Dom2Markdown GitHub repository](https://github.com/DearLM/ChromeExtensions).
 
-## 授权
+## License
 
-本插件遵循 MIT 许可，详细信息请查阅 [LICENSE](https://github.com/DearLM/ChromeExtensions/blob/bea15a2784aa02cd875fa54c1bb2c692fdedae77/LICENSE) 文件。
-
+This extension is licensed under the MIT License. For detailed information, please refer to the [LICENSE](https://github.com/DearLM/ChromeExtensions/blob/bea15a2784aa02cd875fa54c1bb2c692fdedae77/LICENSE) file.
