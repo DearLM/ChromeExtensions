@@ -1,7 +1,6 @@
 class HtmlTools{
   
   constructor() {
-    this.init();
   }
   init() {
     let _self = this;
@@ -13,11 +12,11 @@ class HtmlTools{
         outline: 2px solid red;
       }
     `;
+    document.head.appendChild(style);
     this.mouseoverHandler = (event) =>{
       _self.x = event.clientX; 
       _self.y = event.clientY;
     }
-    document.head.appendChild(style);
     document.addEventListener("mouseover", this.mouseoverHandler);
   }
   htmlToMarkdownInMouse(){
@@ -64,25 +63,35 @@ function htmlToMarkdown(html,filterByClassArray) {
   });
   return turndownService.turndown(html);
 }
-let htmltools;
+let htmltools = new HtmlTools();
 //监听后台消息
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if(msg.cmd ==='open'){
-    htmltools = new HtmlTools();
+    htmltools.init();
+  }else if(msg.cmd === 'shutdown'){
+    htmltools.destroy();
   }else if(msg.cmd === 'html2md') {
     const mdText = htmltools.htmlToMarkdownInMouse();
     chrome.runtime.sendMessage({
       cmd: 'copyMd',
       message: mdText
     });
-  }else if(msg.cmd === 'shutdown'){
-    htmltools.destroy();
-    htmltools = null;
   }
 });
-//发送消息至后台
+//启动时获取插件是否打开
 window.addEventListener('load', function() {
-  chrome.runtime.sendMessage({
-    cmd: 'load'
-  });
+  chrome.runtime.sendMessage(
+    {
+      cmd: 'load'
+    },
+    enabled =>{
+        if (chrome.runtime.lastError) {
+            console.error('发生错误:', chrome.runtime.lastError);
+        } else {
+            if(enabled){
+              htmltools.init();
+            }
+        }
+    }
+  );
 });

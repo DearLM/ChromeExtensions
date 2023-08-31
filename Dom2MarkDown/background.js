@@ -45,7 +45,7 @@ let contextMenusClickHandler = (info, tab) => {
 let tempMd;
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if(msg.cmd === 'load'){
-    chrome.action.setIcon({path: 'md-off.png'});
+    sendResponse(enabled);
   }else if(msg.cmd === 'copyMd'){
     tempMd = msg.message;
   }else if(msg.cmd === 'getMd'){
